@@ -9,7 +9,7 @@ RUN sed -i "s/http:\/\/archive./http:\/\/ru.archive./g" /etc/apt/sources.list
 
 # Install Python runtime
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -qy \
     -o APT::Install-Recommend=false -o APT::Install-Suggests=false \
     python python-virtualenv
 
