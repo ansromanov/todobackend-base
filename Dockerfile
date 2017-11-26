@@ -11,7 +11,7 @@ RUN sed -i "s/http:\/\/archive./http:\/\/ru.archive./g" /etc/apt/sources.list
 RUN apt-get update && \
     apt-get install -qy \
     -o APT::Install-Recommend=false -o APT::Install-Suggests=false \
-    python python-virtualenv
+    python python-virtualenv libpython2.7
 
 # Create virtual environment
 RUN virtualenv /appenv && \
